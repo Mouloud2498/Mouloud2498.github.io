@@ -23,17 +23,39 @@
 
     <!-- Small modern tweaks -->
     <style>
-      .card-img-top {
-        height: 200px;
-        object-fit: cover;
-      }
-      .card {
-        border-radius: 14px;
-      }
-      img.rounded {
-        border-radius: 14px;
-      }
-    </style>
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card {
+    border-radius: 14px;
+  }
+  img.rounded {
+    border-radius: 14px;
+  }
+
+  /* ✅ About image: cadre + rognage propre */
+  .about-photo-wrap{
+    max-width: 880px;     /* largeur max (modifiable) */
+    margin: 24px auto 0;  /* centré */
+    border-radius: 18px;
+    overflow: hidden;     /* IMPORTANT pour rogner */
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  }
+  .about-photo{
+    width: 100%;
+    height: 420px;        /* hauteur du cadre (modifiable) */
+    object-fit: cover;    /* ✅ rognage */
+    object-position: 50% 22%; /* ✅ ajuste le focus (tête) */
+    display: block;
+  }
+
+  /* ✅ Responsive: un peu moins haut sur mobile */
+  @media (max-width: 768px){
+    .about-photo{ height: 280px; object-position: 50% 20%; }
+  }
+</style>
+
   </head>
 
   <body id="page-top">
